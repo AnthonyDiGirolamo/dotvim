@@ -1,0 +1,5 @@
+.DS_Store
+vim/.VimballRecord
+vim/.netrwhist
+viminfo
+*.o
