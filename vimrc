@@ -243,8 +243,9 @@ let g:syntastic_haml_checkers = ['haml_lint']
 
 " let g:airline_theme='murmur'
 " let g:airline_theme='base16'
-let g:airline_theme='badwolf'
+" let g:airline_theme='badwolf'
 " let g:airline_theme='kolor'
+let g:airline_theme='behelit'
 
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
