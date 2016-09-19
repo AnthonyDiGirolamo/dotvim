@@ -113,21 +113,26 @@ set t_Co=256 " set 256 color terminal
 " set background=light
 set background=dark
 " colors solarized
-let base16colorspace=256
-colors base16-eighties
+" let base16colorspace=256
+" colors base16-eighties
+" colors molokai
+colors atom-dark-256
 
 " Gvim settings
 " =============
 
 if has("gui_running")
   if has("gui_gtk2")
-    set guifont=PragmataPro\ 26
+    set guifont=PragmataPro\ 18
   elseif has("gui_macvim")
-    set guifont=PragmataPro:h26
+    " set guifont=PragmataPro:h16
+    set macligatures
+    set guifont=Fira\ Code:h12
   endif
   set guioptions=agm " aegimtT
   set visualbell
   set vb t_vb=
+  colors atom-dark
 endif
 
 " Key Mappings
@@ -242,42 +247,43 @@ let g:syntastic_haml_checkers = ['haml_lint']
 " ================
 
 " let g:airline_theme='murmur'
-let g:airline_theme='base16'
+" let g:airline_theme='base16'
 " let g:airline_theme='badwolf'
-" let g:airline_theme='kolor'
+let g:airline_theme='kolor'
 " let g:airline_theme='behelit'
 
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_powerline_fonts=1
 
-let g:airline_symbols = {}
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
+" let g:airline_symbols = {}
+" let g:airline_left_sep = '⮀'
+" let g:airline_left_alt_sep = '⮁'
+" let g:airline_right_sep = '⮂'
+" let g:airline_right_alt_sep = '⮃'
+" let g:airline_symbols.branch = '⭠'
+" let g:airline_symbols.readonly = '⭤'
+" let g:airline_symbols.linenr = '⭡'
 
-let g:tmuxline_separators = {
-    \ 'left' : '⮀',
-    \ 'left_alt': '⮁',
-    \ 'right' : '⮂',
-    \ 'right_alt' : '⮃',
-    \ 'space' : ' '}
+" let g:tmuxline_separators = {
+"     \ 'left' : '⮀',
+"     \ 'left_alt': '⮁',
+"     \ 'right' : '⮂',
+"     \ 'right_alt' : '⮃',
+"     \ 'space' : ' '}
 
-let g:promptline_symbols = {
-    \ 'left'       : '⮀',
-    \ 'left_alt'   : '⮁',
-    \ 'right' : '⮂',
-    \ 'right_alt' : '⮃',
-    \ 'dir_sep'    : '/',
-    \ 'truncation' : '...',
-    \ 'vcs_branch' : ' ⭠ ',
-    \ 'space'      : ' '}
-" let g:promptline_preset = 'clear'
+" let g:promptline_symbols = {
+"     \ 'left'       : '⮀',
+"     \ 'left_alt'   : '⮁',
+"     \ 'right' : '⮂',
+"     \ 'right_alt' : '⮃',
+"     \ 'dir_sep'    : '/',
+"     \ 'truncation' : '...',
+"     \ 'vcs_branch' : ' ⭠ ',
+"     \ 'space'      : ' '}
+" " let g:promptline_preset = 'clear'
 
 let g:airline#extensions#promptline#snapshot_file = "~/.shell_prompt.sh"
 
