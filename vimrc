@@ -110,10 +110,10 @@ set t_Co=256 " set 256 color terminal
 " set background=light
 set background=dark
 " colors solarized
-" let base16colorspace=256
-" colors base16-eighties
+let base16colorspace=256
+colors base16-eighties
 " colors molokai
-colors atom-dark-256
+" colors atom-dark-256
 
 " Gvim settings
 " =============
@@ -244,9 +244,9 @@ let g:syntastic_haml_checkers = ['haml_lint']
 " ================
 
 " let g:airline_theme='murmur'
-" let g:airline_theme='base16'
+let g:airline_theme='base16_eighties'
 " let g:airline_theme='badwolf'
-let g:airline_theme='kolor'
+" let g:airline_theme='kolor'
 " let g:airline_theme='behelit'
 
 let g:airline#extensions#whitespace#enabled = 0
@@ -494,10 +494,10 @@ function! SmartDot()
   endif
 endfunction
 
-let g:arpeggio_timeoutlen=30
-function! ChordsSetup()
-  Arpeggio inoremap def def<CR>end<Esc>kA<Space>
-  " Arpeggio inoremap ne <ESC>
-  Arpeggio inoremap sel <C-R>=SmartDot()<CR>select {  }<Left><Left>
-endfunction
-autocmd VimEnter * call ChordsSetup()
+" let g:arpeggio_timeoutlen=30
+" function! ChordsSetup()
+"   Arpeggio inoremap def def<CR>end<Esc>kA<Space>
+"   " Arpeggio inoremap ne <ESC>
+"   Arpeggio inoremap sel <C-R>=SmartDot()<CR>select {  }<Left><Left>
+" endfunction
+" autocmd VimEnter * call ChordsSetup()
