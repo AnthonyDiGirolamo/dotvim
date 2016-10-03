@@ -1,11 +1,7 @@
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+set nocompatible               " Use Vim settings, rather then Vi settings
 
-filetype off
-call pathogen#incubate()       " Load Pathogen
+execute pathogen#infect('bundle/{}')
 
-runtime macros/matchit.vim     " Load the matchit plugin.
 set shell=sh
 set cursorline
 " set autochdir                  " autochdir  change to directory of file in buffer
@@ -19,7 +15,8 @@ set laststatus=2               " always show the editing status bar at the botto
 set showcmd                    " display incomplete commands
 set incsearch                  " do incremental searching
 set autoindent
-set number                     " line numbering
+" set number                     " line numbering
+set relativenumber             " relative line numbering
 " set tabstop=2 shiftwidth=2   " not needed with vim-sleuth
 set expandtab
 set linebreak                  " wrap on words rather than characters
@@ -125,9 +122,9 @@ if has("gui_running")
   if has("gui_gtk2")
     set guifont=PragmataPro\ 18
   elseif has("gui_macvim")
-    " set guifont=PragmataPro:h16
+    set guifont=PragmataPro:h18
+    " set guifont=Fira\ Code:h19
     set macligatures
-    set guifont=Fira\ Code:h12
   endif
   set guioptions=agm " aegimtT
   set visualbell
@@ -163,7 +160,7 @@ noremap <leader>D :Gdiff<cr>
 
 setlocal spell spelllang=en_us   " set the spellcheck to english
 noremap <leader>s :setlocal spell! spelllang=en_us<cr>
-" set nospell
+set nospell
 
 " Macro Keybinding
 " nnoremap <leader>d f"wdi"<esc>o<esc>p==kf"dW$bido <esc>o<i class="color-icon-"></i><esc>jo<% end %><esc>
@@ -258,32 +255,32 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts=1
 
-" let g:airline_symbols = {}
-" let g:airline_left_sep = '⮀'
-" let g:airline_left_alt_sep = '⮁'
-" let g:airline_right_sep = '⮂'
-" let g:airline_right_alt_sep = '⮃'
-" let g:airline_symbols.branch = '⭠'
-" let g:airline_symbols.readonly = '⭤'
-" let g:airline_symbols.linenr = '⭡'
+let g:airline_symbols = {}
+let g:airline_left_sep = '⮀'
+let g:airline_left_alt_sep = '⮁'
+let g:airline_right_sep = '⮂'
+let g:airline_right_alt_sep = '⮃'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
 
-" let g:tmuxline_separators = {
-"     \ 'left' : '⮀',
-"     \ 'left_alt': '⮁',
-"     \ 'right' : '⮂',
-"     \ 'right_alt' : '⮃',
-"     \ 'space' : ' '}
+let g:tmuxline_separators = {
+    \ 'left' : '⮀',
+    \ 'left_alt': '⮁',
+    \ 'right' : '⮂',
+    \ 'right_alt' : '⮃',
+    \ 'space' : ' '}
 
-" let g:promptline_symbols = {
-"     \ 'left'       : '⮀',
-"     \ 'left_alt'   : '⮁',
-"     \ 'right' : '⮂',
-"     \ 'right_alt' : '⮃',
-"     \ 'dir_sep'    : '/',
-"     \ 'truncation' : '...',
-"     \ 'vcs_branch' : ' ⭠ ',
-"     \ 'space'      : ' '}
-" " let g:promptline_preset = 'clear'
+let g:promptline_symbols = {
+    \ 'left'       : '⮀',
+    \ 'left_alt'   : '⮁',
+    \ 'right' : '⮂',
+    \ 'right_alt' : '⮃',
+    \ 'dir_sep'    : '/',
+    \ 'truncation' : '...',
+    \ 'vcs_branch' : ' ⭠ ',
+    \ 'space'      : ' '}
+" let g:promptline_preset = 'clear'
 
 let g:airline#extensions#promptline#snapshot_file = "~/.shell_prompt.sh"
 

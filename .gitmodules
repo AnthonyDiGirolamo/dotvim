@@ -118,3 +118,6 @@
 [submodule "vim/bundle/vim-atom-dark.git"]
 	path = vim/bundle/vim-atom-dark.git
 	url = https://github.com/gosukiwi/vim-atom-dark.git
+[submodule "vim/bundle/vim-sensible.git"]
+	path = vim/bundle/vim-sensible.git
+	url = https://github.com/tpope/vim-sensible.git
