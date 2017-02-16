@@ -244,7 +244,7 @@ let g:syntastic_haml_checkers = ['haml_lint']
 " ================
 
 " let g:airline_theme='murmur'
-let g:airline_theme='base16_eighties'
+let g:airline_theme='base16'
 " let g:airline_theme='badwolf'
 " let g:airline_theme='kolor'
 " let g:airline_theme='behelit'
@@ -256,29 +256,29 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts=1
 
 let g:airline_symbols = {}
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = 'br'
+let g:airline_symbols.readonly = 'ro'
+let g:airline_symbols.linenr = 'ln'
 
 let g:tmuxline_separators = {
-    \ 'left' : '⮀',
-    \ 'left_alt': '⮁',
-    \ 'right' : '⮂',
-    \ 'right_alt' : '⮃',
+    \ 'left' : '',
+    \ 'left_alt': '',
+    \ 'right' : '',
+    \ 'right_alt' : '',
     \ 'space' : ' '}
 
 let g:promptline_symbols = {
-    \ 'left'       : '⮀',
-    \ 'left_alt'   : '⮁',
-    \ 'right' : '⮂',
-    \ 'right_alt' : '⮃',
+    \ 'left'       : '',
+    \ 'left_alt'   : '',
+    \ 'right' : '',
+    \ 'right_alt' : '',
     \ 'dir_sep'    : '/',
     \ 'truncation' : '...',
-    \ 'vcs_branch' : ' ⭠ ',
+    \ 'vcs_branch' : 'Git:',
     \ 'space'      : ' '}
 " let g:promptline_preset = 'clear'
 
